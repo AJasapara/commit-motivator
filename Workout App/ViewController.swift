@@ -7,16 +7,41 @@
 //
 
 import UIKit
-import CoreData
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate  {
 
     @IBOutlet weak var initialCommit: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var sampleDays: UILabel!
     
+    var locationManager = CLLocationManager()
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        manager.stopUpdatingLocation()
+        let defaults = UserDefaults.standard
+        defaults.set(userLocation, forKey: "gymLocation")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+
+        }
         // Do any additional setup after loading the view, typically from a nib.
         initialCommit.text = "$45"
         initialCommit.becomeFirstResponder()
