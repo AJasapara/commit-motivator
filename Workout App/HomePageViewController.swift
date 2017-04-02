@@ -19,11 +19,9 @@ class HomePageViewController: UIPageViewController {
                                completion: nil)
         }
         // Do any additional setup after loading the view.
-        //let pageControlAppearance = UIPageControl.appearance()
-        //pageControlAppearance.pageIndicatorTintColor = UIColor.red
-        //pageControlAppearance.currentPageIndicatorTintColor = UIColor.red
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,9 +51,6 @@ class HomePageViewController: UIPageViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: "lostMoneyViewController")
     }
-    
-
-
 }
 
 // MARK: UIPageViewControllerDataSource
