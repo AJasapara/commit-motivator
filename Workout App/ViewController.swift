@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var initialCommit: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,18 @@ class ViewController: UIViewController {
         */
     }
     
+    @IBAction func buttonPressed(_ sender: Any) {
+        let initialText = initialCommit.text
+        // Removing dollar sign
+        let index = initialText?.index((initialText?.startIndex)!, offsetBy: 1)
+        let initialInt: Int = Int((initialText?.substring(from: index!))!)!
+        let defaults = UserDefaults.standard
+        
+        // Setting initial balance
+        defaults.set(initialInt, forKey: "startingBalance")
+        defaults.set(initialInt, forKey: "currentBalance")
+        defaults.set(datePicker.date, forKey: "endDate")
+    }
     func dollarSignExists(text: String) -> Bool {
         return text[0] == "$"
     }

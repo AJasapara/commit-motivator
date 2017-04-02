@@ -17,6 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "commitViewController")
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeViewController")
+        
+        let defaults = UserDefaults.standard
+        let endDate = defaults.object(forKey: "endDate")
+        
+        // See if date equals end date
+        if (endDate == nil || (endDate as! Date) <= Date()) {
+            self.window?.rootViewController = initialViewController
+        }
+        else {
+            self.window?.rootViewController = homeViewController
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
