@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BA6CA101E90F1C50037B860 /* Work.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BA6CA0F1E90F1C50037B860 /* Work.mp3 */; };
+		2BE6E6EA1E90DC5200C4FC64 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E6E91E90DC5200C4FC64 /* MusicViewController.swift */; };
 		763B43211E8F7C2800DF732A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B43201E8F7C2800DF732A /* AppDelegate.swift */; };
 		763B43231E8F7C2800DF732A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B43221E8F7C2800DF732A /* ViewController.swift */; };
 		763B43261E8F7C2800DF732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763B43241E8F7C2800DF732A /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		1655DBB36C781582F30ED10D /* Pods-Workout App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout App/Pods-Workout App.debug.xcconfig"; sourceTree = "<group>"; };
 		2875FE28DC5C0EABA534EF87 /* Pods-Workout App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout App/Pods-Workout App.release.xcconfig"; sourceTree = "<group>"; };
+		2BA6CA0F1E90F1C50037B860 /* Work.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Work.mp3; sourceTree = "<group>"; };
+		2BE6E6E91E90DC5200C4FC64 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		60137E102CFBE9C90186F690 /* libPods-Workout App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workout App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		763B431D1E8F7C2800DF732A /* Workout App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		763B43201E8F7C2800DF732A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,8 +130,10 @@
 			children = (
 				763B43201E8F7C2800DF732A /* AppDelegate.swift */,
 				763B43221E8F7C2800DF732A /* ViewController.swift */,
+				2BA6CA0F1E90F1C50037B860 /* Work.mp3 */,
 				763B43241E8F7C2800DF732A /* Main.storyboard */,
 				764462861E90C97C00326E17 /* DaysLeftViewController.swift */,
+				2BE6E6E91E90DC5200C4FC64 /* MusicViewController.swift */,
 				764462881E90C98800326E17 /* MoneyLostViewController.swift */,
 				764462841E90BD6C00326E17 /* HomePageViewController.swift */,
 				764462821E90BCF900326E17 /* Utilities.swift */,
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				763B432E1E8F7C2800DF732A /* LaunchScreen.storyboard in Resources */,
+				2BA6CA101E90F1C50037B860 /* Work.mp3 in Resources */,
 				763B432B1E8F7C2800DF732A /* Assets.xcassets in Resources */,
 				763B43261E8F7C2800DF732A /* Main.storyboard in Resources */,
 			);
@@ -358,6 +365,7 @@
 				764462851E90BD6C00326E17 /* HomePageViewController.swift in Sources */,
 				763B43211E8F7C2800DF732A /* AppDelegate.swift in Sources */,
 				764462831E90BCF900326E17 /* Utilities.swift in Sources */,
+				2BE6E6EA1E90DC5200C4FC64 /* MusicViewController.swift in Sources */,
 				764462811E907D2F00326E17 /* HomeViewController.swift in Sources */,
 				764462871E90C97C00326E17 /* DaysLeftViewController.swift in Sources */,
 			);
