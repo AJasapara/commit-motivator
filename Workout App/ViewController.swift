@@ -13,12 +13,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var initialCommit: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var sampleDays: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initialCommit.text = "$45"
         initialCommit.becomeFirstResponder()
+        sampleDays.text = "(0 days)"
+        datePicker.minimumDate = Date()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +43,11 @@ class ViewController: UIViewController {
             initialCommit.text = ""
         }
         */
+    }
+    
+    @IBAction func dateEdited(_ sender: Any) {
+        let daysBetween = Utils.calculateDaysBetweenTwoDates(start: Date(), end: datePicker.date)
+        sampleDays.text = "(" + String(daysBetween) + " days)"
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -85,5 +93,17 @@ extension String {
         return self[Range(start ..< end)]
     }
     
+}
+
+extension Date {
+    func interval(ofComponent comp: Calendar.Component, fromDate date: Date) -> Int {
+        
+        let currentCalendar = Calendar.current
+        
+        guard let start = currentCalendar.ordinality(of: comp, in: .era, for: date) else { return 0 }
+        guard let end = currentCalendar.ordinality(of: comp, in: .era, for: self) else { return 0 }
+        
+        return end - start
+    }
 }
 

@@ -16,6 +16,10 @@
 		763B43391E8F7C2800DF732A /* Workout_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B43381E8F7C2800DF732A /* Workout_AppTests.swift */; };
 		763B43441E8F7C2800DF732A /* Workout_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B43431E8F7C2800DF732A /* Workout_AppUITests.swift */; };
 		764462811E907D2F00326E17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764462801E907D2F00326E17 /* HomeViewController.swift */; };
+		764462831E90BCF900326E17 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764462821E90BCF900326E17 /* Utilities.swift */; };
+		764462851E90BD6C00326E17 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764462841E90BD6C00326E17 /* HomePageViewController.swift */; };
+		764462871E90C97C00326E17 /* DaysLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764462861E90C97C00326E17 /* DaysLeftViewController.swift */; };
+		764462891E90C98800326E17 /* MoneyLostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764462881E90C98800326E17 /* MoneyLostViewController.swift */; };
 		C2E0ACC5493EC214CE5B7055 /* libPods-Workout App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60137E102CFBE9C90186F690 /* libPods-Workout App.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,10 @@
 		763B43431E8F7C2800DF732A /* Workout_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_AppUITests.swift; sourceTree = "<group>"; };
 		763B43451E8F7C2800DF732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764462801E907D2F00326E17 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		764462821E90BCF900326E17 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		764462841E90BD6C00326E17 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		764462861E90C97C00326E17 /* DaysLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysLeftViewController.swift; sourceTree = "<group>"; };
+		764462881E90C98800326E17 /* MoneyLostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyLostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,10 @@
 				763B43201E8F7C2800DF732A /* AppDelegate.swift */,
 				763B43221E8F7C2800DF732A /* ViewController.swift */,
 				763B43241E8F7C2800DF732A /* Main.storyboard */,
+				764462861E90C97C00326E17 /* DaysLeftViewController.swift */,
+				764462881E90C98800326E17 /* MoneyLostViewController.swift */,
+				764462841E90BD6C00326E17 /* HomePageViewController.swift */,
+				764462821E90BCF900326E17 /* Utilities.swift */,
 				764462801E907D2F00326E17 /* HomeViewController.swift */,
 				763B432A1E8F7C2800DF732A /* Assets.xcassets */,
 				763B432C1E8F7C2800DF732A /* LaunchScreen.storyboard */,
@@ -341,9 +353,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				763B43231E8F7C2800DF732A /* ViewController.swift in Sources */,
+				764462891E90C98800326E17 /* MoneyLostViewController.swift in Sources */,
 				763B43291E8F7C2800DF732A /* Workout_App.xcdatamodeld in Sources */,
+				764462851E90BD6C00326E17 /* HomePageViewController.swift in Sources */,
 				763B43211E8F7C2800DF732A /* AppDelegate.swift in Sources */,
+				764462831E90BCF900326E17 /* Utilities.swift in Sources */,
 				764462811E907D2F00326E17 /* HomeViewController.swift in Sources */,
+				764462871E90C97C00326E17 /* DaysLeftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

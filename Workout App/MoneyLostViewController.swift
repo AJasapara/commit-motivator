@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MoneyLostViewController.swift
 //  Workout App
 //
 //  Created by Sanketh Hegde on 4/1/17.
@@ -8,23 +8,22 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class MoneyLostViewController: UIViewController {
 
+    @IBOutlet weak var box: UIView!
     @IBOutlet weak var lostNumber: UILabel!
-    @IBOutlet weak var daysLeft: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        box.layer.cornerRadius = 4
+        box.layer.masksToBounds = true
+        box.layer.borderWidth = 1
+        box.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
+        
         let defaults = UserDefaults.standard
         let startingBalance = defaults.integer(forKey: "startingBalance")
         let currentBalance = defaults.integer(forKey: "currentBalance")
         let moneyLost = startingBalance - currentBalance
-        
-        let endDate = defaults.object(forKey: "endDate") as! Date
-        let daysBetween = Utils.calculateDaysBetweenTwoDates(start: Date(), end: endDate)
-        
         lostNumber.text = "$" + String(moneyLost)
-        daysLeft.text = String(daysBetween)
         if (moneyLost > 0) {
             lostNumber.textColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
         }
@@ -32,10 +31,7 @@ class HomeViewController: UIViewController {
             lostNumber.textColor = UIColor(red: 0, green: 128/255, blue: 64/255, alpha: 1)
         }
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
