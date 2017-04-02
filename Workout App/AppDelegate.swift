@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "commitViewController")
-        let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeViewController")
         
         let defaults = UserDefaults.standard
         let endDate = defaults.object(forKey: "endDate")
@@ -32,9 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = initialViewController
         }
         else {
-            self.window?.rootViewController = homeViewController
+            self.window?.rootViewController = storyboard.instantiateInitialViewController()
         }
-        
         self.window?.makeKeyAndVisible()
         
         return true
